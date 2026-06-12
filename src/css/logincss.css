@@ -1,20 +1,22 @@
 @charset "UTF-8";
 
+:root{
+    --corPrim:#000000;
+    --corSecu:#131212;
+    --corTerc:#d1d0d0;
+    --corDest: #fff;
+    --corShad:#00000062;
+    --DestaSec:#8b0000;
+    --corLink: #ebeb00;
+    
+    --fontPrim:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-:root{
-    --corPrim:rgb(0,0,0);
-    --corSecu:rgb(19, 18, 18);
-    --corTerc:rgb(209, 208, 208);
-    --corDest: #fff;
-    --corShad:rgba(0, 0, 0, 0.384);
-    --DestaSec:rgb(139, 0, 0);
-    --corLink: rgb(235, 235, 0);
+    font-family: var(--fontPrim);
 }
 
 html,
