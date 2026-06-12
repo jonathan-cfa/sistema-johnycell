@@ -14,7 +14,6 @@ html,body{
     height: 100dvh;
     display: flex;
     flex-flow: column nowrap;
-    
 }
 
 header{
@@ -24,74 +23,73 @@ header{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
-    h1{
-        font-size: 1.4em;
-    }
-    
-    img{
-        width: 90px;
-        height: 40px;
-        margin-right: 10px;
-        
-    }
-
 }
+
+header h1{
+    font-size: 1.4em;
+}
+
+header img{
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+}
+
 main{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
-    
 }
+
 section{
     background-color: white;
     color: black;
     max-width: 350px;
     border-radius: 8px;
     flex: 1 1 400px;
+}
 
-    .foto{
-        display: none;
-    }
+section .foto{
+    display: none;
+}
 
-    form{
-        display: flex;
-        flex-flow: column nowrap;
-        padding: 15px;
-        font-weight: bold;
-        
-        label{
-            margin-top: 10px;
-        }
+section form{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 15px;
+    font-weight: bold;
+}
 
-        input{
-            align-self: flex-start;
-            margin-top: 5px;
+section form label{
+    margin-top: 10px;
+}
 
-        }
-        p{
-            margin-top: 10px;
-            font-size: 11px;
-        }
-        #btnlogin{
-            margin: 10px 0px;
-            width: 100px;
-            padding: 10px;
-            border-radius: 8px;
-            border-style: none;
-            box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.384);
-            background-color: rgb(209, 208, 208);
-            font-weight: bold;
+section form input{
+    align-self: flex-start;
+    margin-top: 5px;
+}
 
-            &:hover{
-                background-color: darkred;
-                color: white;
-            }
-        
-        }
-    }
+section form p{
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+section form #btnlogin{
+    margin: 10px 0px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.384);
+    background-color: rgb(209, 208, 208);
+    font-weight: bold;
+}
+
+section form #btnlogin:hover{
+    background-color: darkred;
+    color: white;
 }
 
 footer{
@@ -100,16 +98,18 @@ footer{
     padding: 10px;
     text-align: center;
     margin-top: 20px;
-    a{
-        color: white;
-        text-decoration: none;
-        &:hover{
-            color: yellow;
-        }
-    }
 }
 
-@media screen and (min-width:640px) {
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: yellow;
+}
+
+@media screen and (min-width:640px){
 
     section{
         max-width: 500px;
@@ -117,22 +117,23 @@ footer{
         justify-items: center;
         display: flex;
         justify-content: space-around;
-        transition:  1s;
+        transition: 1s;
+    }
 
-        form{
-            align-self: center;
-        }
+    section form{
+        align-self: center;
+    }
 
-        .foto{
-            display: block;
-            padding: 10px;
-            order: 1;
-            align-self: center;
-           align-items: flex-end;
-            img{
-                width: 150px;
-                border-radius: 10%;
-            }
-        }
+    section .foto{
+        display: block;
+        padding: 10px;
+        order: 1;
+        align-self: center;
+        align-items: flex-end;
+    }
+
+    section .foto img{
+        width: 150px;
+        border-radius: 10%;
     }
 }
