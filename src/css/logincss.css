@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body,html{
+    background-color: rgb(19, 18, 18);
+    color: white;
+}
+
+header{
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    img{
+        width: 200px;
+        height: 90px;
+        
+    }
+
+}
+main{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+section{
+    background-color: white;
+    color: black;
+    max-width: 350px;
+    border-radius: 8px;
+    margin-top: 30px;
+    flex: 1 1 400px;
+
+    .foto{
+        display: none;
+    }
+
+    form{
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 15px;
+        font-weight: bold;
+        
+        label{
+            margin-top: 10px;
+        }
+
+        input{
+            align-self: flex-start;
+            margin-top: 5px;
+
+        }
+        p{
+            margin-top: 10px;
+            font-size: 11px;
+        }
+        #btnlogin{
+            margin: 10px 0px;
+            width: 100px;
+            padding: 10px;
+            border-radius: 8px;
+            border-style: none;
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.384);
+            background-color: rgb(209, 208, 208);
+            font-weight: bold;
+
+            &:hover{
+                background-color: darkred;
+                color: white;
+            }
+        
+        }
+    }
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    a{
+        color: white;
+        text-decoration: none;
+        &:hover{
+            color: yellow;
+        }
+    }
+}
+
+@media screen and (min-width:640px) {
+
+    section{
+        max-width: 600px;
+        justify-items: center;
+        display: flex;
+        justify-content: center;
+        transition:  1s;
+
+        .foto{
+            display: block;
+            padding: 10px;
+            order: 1;
+            img{
+                width: 200px;
+                border-radius: 10%;
+            }
+        }
+    }
+}
