@@ -7,9 +7,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body,html{
+html,body{
     background-color: rgb(19, 18, 18);
     color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    
 }
 
 header{
@@ -30,9 +35,9 @@ header{
 main{
     display: flex;
     flex-flow: row wrap;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+    flex: 1 1 auto;
     
 }
 section{
@@ -40,7 +45,6 @@ section{
     color: black;
     max-width: 350px;
     border-radius: 8px;
-    margin-top: 30px;
     flex: 1 1 400px;
 
     .foto{
@@ -103,18 +107,25 @@ footer{
 @media screen and (min-width:640px) {
 
     section{
-        max-width: 600px;
+        max-width: 500px;
+        height: 350px;
         justify-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         transition:  1s;
+
+        form{
+            align-self: center;
+        }
 
         .foto{
             display: block;
             padding: 10px;
             order: 1;
+            align-self: center;
+           align-items: flex-end;
             img{
-                width: 200px;
+                width: 150px;
                 border-radius: 10%;
             }
         }
