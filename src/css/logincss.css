@@ -1,23 +1,34 @@
 @charset "UTF-8";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html,body{
-    background-color: rgb(19, 18, 18);
-    color: white;
+:root{
+    --corPrim:rgb(0,0,0);
+    --corSecu:rgb(19, 18, 18);
+    --corTerc:rgb(209, 208, 208);
+    --corDest: #fff;
+    --corShad:rgba(0, 0, 0, 0.384);
+    --DestaSec:rgb(139, 0, 0);
+    --corLink: rgb(235, 235, 0);
+}
+
+html,
+body {
+    background-color: var(--corSecu);
+    color: var(--corDest);
     width: 100dvw;
     height: 100dvh;
     display: flex;
     flex-flow: column nowrap;
 }
 
-header{
-    background-color: black;
+header {
+    background-color: var(--corPrim);
     padding: 15px;
     display: flex;
     flex-flow: row nowrap;
@@ -25,17 +36,17 @@ header{
     align-items: center;
 }
 
-header h1{
-    font-size: 1.4em;
+header h1 {
+    font-size: 1.0em;
 }
 
-header img{
+header img {
     width: 90px;
     height: 40px;
     margin-right: 10px;
 }
 
-main{
+main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -43,75 +54,81 @@ main{
     flex: 1 1 auto;
 }
 
-section{
-    background-color: white;
-    color: black;
+section {
+    background-color: var(--corDest);
+    color: var(--corPrim);
     max-width: 350px;
     border-radius: 8px;
     flex: 1 1 400px;
 }
 
-section .foto{
+section .foto {
     display: none;
 }
 
-section form{
+section form {
     display: flex;
     flex-flow: column nowrap;
     padding: 15px;
     font-weight: bold;
 }
 
-section form label{
+section form label {
     margin-top: 10px;
 }
 
-section form input{
+section form input {
     align-self: flex-start;
     margin-top: 5px;
 }
 
-section form p{
+section form p {
     margin-top: 10px;
     font-size: 11px;
 }
 
-section form #btnlogin{
+section form #btnlogin {
     margin: 10px 0px;
     width: 100px;
     padding: 10px;
     border-radius: 8px;
     border-style: none;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.384);
-    background-color: rgb(209, 208, 208);
+    box-shadow: 3px 3px 4px var(--corShad);
+    background-color: var(--corTerc);
+    color: var(--corPrim);
     font-weight: bold;
 }
 
-section form #btnlogin:hover{
-    background-color: darkred;
-    color: white;
+section form #btnlogin:hover {
+    background-color: var(--DestaSec);
+    color: var(--corDest);
 }
 
-footer{
-    background-color: black;
-    color: white;
-    padding: 10px;
+footer {
+    background-color: var(--corPrim);
+    color: var(--corTerc);
+    font-size: 10px;
     text-align: center;
+    padding: 10px;    
     margin-top: 20px;
 }
 
-footer a{
-    color: white;
+footer a {
+    color: var(--corDest);
     text-decoration: none;
 }
 
-footer a:hover{
-    color: yellow;
+footer a:hover {
+    color: var(--corLink);
 }
 
-@media screen and (min-width:640px){
+@media screen and (min-width:640px) {
 
-    section{
+    header h1{
+        font-size: 1.8em;
+    }
+
+    section {
         max-width: 500px;
         height: 350px;
         justify-items: center;
@@ -120,11 +137,11 @@ footer a:hover{
         transition: 1s;
     }
 
-    section form{
+    section form {
         align-self: center;
     }
 
-    section .foto{
+    section .foto {
         display: block;
         padding: 10px;
         order: 1;
@@ -132,8 +149,13 @@ footer a:hover{
         align-items: flex-end;
     }
 
-    section .foto img{
+    section .foto img {
         width: 150px;
         border-radius: 10%;
+    }
+
+    footer{
+        font-size: 14px;
+        color: var(--corTerc);
     }
 }
