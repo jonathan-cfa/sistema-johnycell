@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+:root{
+    --corPrim:#000000;
+    --corSecu:#131212;
+    --corTerc:#d1d0d0;
+    --corDest: #fff;
+    --corShad:#00000062;
+    --DestaSec:#8b0000;
+    --corLink: #ebeb00;
+    
+    --fontPrim:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontPrim);
+}
+
+html,
+body {
+    background-color: var(--corSecu);
+    color: var(--corDest);
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header {
+    background-color: var(--corPrim);
+    padding: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.0em;
+}
+
+header img {
+    width: 90px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+section {
+    background-color: var(--corDest);
+    color: var(--corPrim);
+    max-width: 350px;
+    border-radius: 8px;
+    flex: 1 1 400px;
+}
+section h1 {
+    padding: 10px;
+}
+
+section .foto {
+    display: none;
+}
+
+section form {
+    padding: 15px;
+    font-weight: bold;
+}
+
+section form label {
+    margin-top: 10px;
+}
+
+section form input {
+    align-self: flex-start;
+    margin-top: 5px;
+}
+
+#primir{
+    padding: 5px;
+    border-style: none;
+    background-color: var(--corTerc);
+    color: var(--corPrim);
+    border-radius: 3px;
+    font-weight: bold;
+}
+#primir:hover{
+    background-color: var(--DestaSec);
+    color: var(--corDest);
+}
+#contatar{
+    padding: 5px;
+    border-style: none;
+    background-color: var(--corTerc);
+    color: var(--corPrim);
+    border-radius: 3px;
+    font-weight: bold;
+}
+#contatar:hover{
+    background-color: var(--DestaSec);
+    color: var(--corDest);
+}
+
+footer {
+    background-color: var(--corPrim);
+    color: var(--corTerc);
+    font-size: 10px;
+    text-align: center;
+    padding: 10px;    
+    margin-top: 20px;
+}
+
+footer a {
+    color: var(--corDest);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--corLink);
+}
+
+@media screen and (min-width:640px) {
+
+    header h1{
+        font-size: 1.8em;
+    }
+
+    section {
+        max-width: 95%;
+    }
+
+    label{
+        margin: 15px;
+    }
+
+    fieldset{
+        padding: 15px;
+    }
+
+    button{
+        padding: 10px;
+    }
+
+    footer{
+        font-size: 14px;
+        color: var(--corTerc);
+    }
+}

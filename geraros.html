@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Johny Cell</title>
+    <link rel="stylesheet" href="src/css/print.css">
+    <link rel="shortcut icon" href="src/imagens/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="src/imagens/logo.webp" alt="Logo Johny Cell">
+        <h1>Sistema de Gestão v1.0</h1>
+    </header>
+    <main>
+        <section>
+            <h1>Nova O.S.</h1>
+
+            <form>
+                <fieldset>
+                    <legend>Infor. O.S.</legend>
+                    <label for="ios">Nº O.S.</label>
+                    <input type="number" name="os" id="ios">
+                    <label for="idata">Data Entrada:</label>
+                    <input type="date" name="data" id="idata">
+                    <label for="ihora">Hora da Entrada:</label>
+                    <input type="time" name="hora" id="ihora">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dados Cliente</legend>
+                    <label for="icliente">Nome do Cliente:</label>
+                    <input type="text" name="cliente" id="icliente">
+                    <label for="itelefone">Número para Contato</label>
+                    <input type="tel" name="tele" id="itelefone">
+                </fieldset>
+
+                <fieldset id="infotel">
+                    <legend>Infor. Aparelho</legend>
+                    <label for="iaparelho">Aparelho:</label>
+                    <input type="text" name="aparelho" id="iaparelho">
+                    <label for="iimei">IMEI:</label>
+                    <input type="text" name="imei" id="iimei"> <br>
+                    <label for="inaoliga">Aparelho Não liga?</label>
+                    <input type="checkbox" name="naoliga" id="inaoliga">
+                    <label for="itela">Tela quebrada</label>
+                    <input type="checkbox" name="tela" id="itela">
+                    <label for="ivibra">Vibra?</label>
+                    <input type="checkbox" name="vibra" id="ivibra">
+                    <label for="imarcas">Marcas de uso?</label>
+                    <input type="checkbox" name="imarcas" id="imarcas">
+                    <label for="ichip">Chip?</label>
+                    <input type="checkbox" name="chip" id="ichip">
+                    <label for="isd">Cartão SD?</label>
+                    <input type="checkbox" name="isd" id="isd"> <br>
+                    <label for="idefeito">Defeito Relatado:</label> <br>
+                    <textarea name="defeito" id="idefeito" rows="5" cols="50"></textarea>
+                </fieldset>
+                <input type="button" value="IMPRIMIR" id="primir">
+                <input type="button" value="WHATSAPP" id="contatar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Desenvolvido por <a href="https://github.com/jonathan-cfa" target="_blank" rel="follow">Jonathan
+                C.</a> para <a href="https://www.instagram.com/johnycell.oficial/" target="_blank"
+                rel="follow">@johnycell.oficial</a></p>
+    </footer>
+    <script src="print.js"></script>
+</body>
+
+</html>
