@@ -1,15 +1,15 @@
 @charset "UTF-8";
 
-:root{
-    --corPrim:#000000;
-    --corSecu:#131212;
-    --corTerc:#d1d0d0;
+:root {
+    --corPrim: #000000;
+    --corSecu: #131212;
+    --corTerc: #d1d0d0;
     --corDest: #fff;
-    --corShad:#00000062;
-    --DestaSec:#8b0000;
+    --corShad: #00000062;
+    --DestaSec: #8b0000;
     --corLink: #ebeb00;
-    
-    --fontPrim:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --fontPrim: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -23,7 +23,6 @@ html,
 body {
     background-color: var(--corSecu);
     color: var(--corDest);
-    width: 100dvw;
     height: 100dvh;
     display: flex;
     flex-flow: column nowrap;
@@ -50,42 +49,44 @@ header img {
 
 main {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
 }
 
-section {
+section#createos {
     background-color: var(--corDest);
     color: var(--corPrim);
     max-width: 350px;
     border-radius: 8px;
     flex: 1 1 400px;
+
 }
-section h1 {
+
+section#createos h1 {
     padding: 10px;
 }
 
-section .foto {
+section#createos .foto {
     display: none;
 }
 
-section form {
+section#createos form {
     padding: 15px;
     font-weight: bold;
 }
 
-section form label {
+section#createos form label {
     margin-top: 10px;
 }
 
-section form input {
+section#createos form input {
     align-self: flex-start;
     margin-top: 5px;
 }
 
-#primir{
+#primir {
     padding: 5px;
     border-style: none;
     background-color: var(--corTerc);
@@ -93,11 +94,13 @@ section form input {
     border-radius: 3px;
     font-weight: bold;
 }
-#primir:hover{
+
+#primir:hover {
     background-color: var(--DestaSec);
     color: var(--corDest);
 }
-#contatar{
+
+#contatar {
     padding: 5px;
     border-style: none;
     background-color: var(--corTerc);
@@ -105,7 +108,8 @@ section form input {
     border-radius: 3px;
     font-weight: bold;
 }
-#contatar:hover{
+
+#contatar:hover {
     background-color: var(--DestaSec);
     color: var(--corDest);
 }
@@ -115,7 +119,7 @@ footer {
     color: var(--corTerc);
     font-size: 10px;
     text-align: center;
-    padding: 10px;    
+    padding: 10px;
     margin-top: 20px;
 }
 
@@ -128,30 +132,90 @@ footer a:hover {
     color: var(--corLink);
 }
 
+
+
+#printos {
+    display: none;
+}
+
+
 @media screen and (min-width:640px) {
 
-    header h1{
+    header h1 {
         font-size: 1.8em;
     }
 
-    section {
-        max-width: 95%;
+    section#createos {
+        max-width: 90%;
     }
 
-    label{
+    label {
         margin: 15px;
     }
 
-    fieldset{
+    fieldset {
         padding: 15px;
     }
 
-    button{
+    button {
         padding: 10px;
     }
 
-    footer{
+    footer {
         font-size: 14px;
         color: var(--corTerc);
     }
+}
+
+@media print {
+    #createos * {
+        visibility: hidden;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #printos,
+    #printos * {
+        visibility: visible;
+    }
+
+    #printos {
+        display: block;
+        width: 58mm;
+        margin: 0;
+        font-size: 18px;
+        font-family: monospace;
+        color: black !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #printos p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .cabeca {
+        text-align: center;
+    }
+
+    img {
+        width: 200px;
+        /* -webkit-print-color-adjust: exact;
+        print-color-adjust: exact; */
+        filter: contrast(300%) brightness(0);
+    }
+
+    .os {
+        font-size: 2em;
+    }
+
+    @page {
+        size: 58mm auto;
+        margin: 2mm;
+    }
+
 }

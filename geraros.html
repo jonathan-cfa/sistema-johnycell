@@ -15,14 +15,14 @@
         <h1>Sistema de Gestão v1.0</h1>
     </header>
     <main>
-        <section>
+        <section id="createos">
             <h1>Nova O.S.</h1>
 
             <form>
                 <fieldset>
                     <legend>Infor. O.S.</legend>
                     <label for="ios">Nº O.S.</label>
-                    <input type="number" name="os" id="ios">
+                    <input type="number" name="os" id="ios" disabled>
                     <label for="idata">Data Entrada:</label>
                     <input type="date" name="data" id="idata">
                     <label for="ihora">Hora da Entrada:</label>
@@ -43,8 +43,8 @@
                     <input type="text" name="aparelho" id="iaparelho">
                     <label for="iimei">IMEI:</label>
                     <input type="text" name="imei" id="iimei"> <br>
-                    <label for="inaoliga">Aparelho Não liga?</label>
-                    <input type="checkbox" name="naoliga" id="inaoliga">
+                    <label for="iliga">Aparelho Não liga?</label>
+                    <input type="checkbox" name="liga" id="iliga">
                     <label for="itela">Tela quebrada</label>
                     <input type="checkbox" name="tela" id="itela">
                     <label for="ivibra">Vibra?</label>
@@ -57,10 +57,45 @@
                     <input type="checkbox" name="isd" id="isd"> <br>
                     <label for="idefeito">Defeito Relatado:</label> <br>
                     <textarea name="defeito" id="idefeito" rows="5" cols="50"></textarea>
+                    <label for="isenha">Senha do aparelho:</label>
+                    <input type="text" name="senha" id="isenha">
+                </fieldset>
+                <fieldset>
+                    <legend>Custos</legend>
+                    <label for="icusto">Valor total de serviço: R$</label>
+                    <input type="number" name="custo" id="icusto">
                 </fieldset>
                 <input type="button" value="IMPRIMIR" id="primir">
                 <input type="button" value="WHATSAPP" id="contatar">
             </form>
+        </section>
+
+        <section id="printos">
+            <div class="cabeca">
+                <img src="src/imagens/logo.webp" alt="Logo Johny Cell" class="imgcab">
+                <p>Rua Rosa Fernandes da Silva, 3, Nova Esperança - Parnamirim/rn</p>
+                <p>(84)99817-1353</p><br>
+                </h2>
+                <p class="os" id="ros"></p> <br>
+            </div>
+
+            <p id="rdata"></p>
+            <p id="rhora"></p>
+            <p id="rcliente"></p>
+            <p id="rcontato"></p>
+            <p id="raparelho"></p>
+            <p id="rimei"></p>
+            <p id="rliga"></p>
+            <p id="rtela"></p>
+            <p id="rvibra"></p>
+            <p id="rmarca"></p>
+            <p id="rchip"></p>
+            <p id="rsd"></p>
+            <p id="rdefeito"></p>
+            <p id="rsenha"></p>
+            <p id="rcusto"></p> <br>
+            <p>Siga @johnycell.oficial no instagram</p> <br>
+            <p>Deus te abençoe!</p>
         </section>
     </main>
     <footer>
