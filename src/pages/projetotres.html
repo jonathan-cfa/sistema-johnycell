@@ -4,17 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Johny Cell</title>
-    <link rel="stylesheet" href="src/css/logincss.css">
+    <link rel="stylesheet" href="../css/projetotres.css">
     <link rel="shortcut icon" href="src/images/favicon.svg" type="image/x-icon">
 </head>
 <body>
     <header>
-        <img src="src/images/logo.webp" alt="Logo Johny Cell">
+        <img src="/src/images/logo.webp" alt="Logo Johny Cell">
         <h1>Sistema de Gestão v1.0</h1>
     </header>
     <main>
-        <section>
-            <a href="geraros.html">Gerar OS</a>
+        <section class="coleta-dados">
+            <h1>Gerador de O.S.</h1>
+            <form>
+                <label for="iclient">Cliente:</label>
+                <input type="text" name="client" id="iclient">
+                <label for="idevice">Aparelho:</label>
+                <input type="text" name="device" id="idevice"> <br>
+                <label for="idefect">Defeito relatado:</label> <br>
+                <textarea name="defect" id="idefect" cols="30" rows="5"></textarea> <br>
+                <label for="ivalue">Valor estimado:</label>
+                <input type="number" name="value" id="ivalue">
+            </form>
+            <div id="status-msg">
+                <p>Sucesso!</p>
+            </div>
+            <div class="area-buttons">
+                <button id="btn-osgenerate">GERAR OS</button>
+                <button id="btn-oslist">LISTA DE OS</button>
+            </div>
+        </section>
+        <section class="services-list">
+            <h1>Lista de Serviços</h1>
+            <button id="btn-new-service">NOVO SERVIÇO</button>
+            <div class="services">
+
+            </div>
+            
         </section>
     </main>
     <footer>
