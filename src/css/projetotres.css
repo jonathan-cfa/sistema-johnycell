@@ -146,7 +146,6 @@ footer a:hover {
 
     .coleta-dados {
         max-width: 30%;
-        display: block;
     }
 
     section h1 {
@@ -167,8 +166,8 @@ footer a:hover {
     }
 
     .services-list {
-        display: none;
         max-width: 100%;
+        display: none;
     }
 
     .services{
@@ -183,6 +182,6 @@ footer a:hover {
 
     footer {
         font-size: 14px;
-        color: var(--corTerc);
+        color: var(--corTerc); 
     }
 }
