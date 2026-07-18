@@ -60,9 +60,29 @@ section {
     background-color: var(--corDest);
     color: var(--corPrim);
     max-width: 350px;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
     border-radius: 8px;
     flex: 1 1 400px;
 }
+
+section a {
+        text-decoration: none;
+        text-align: center;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: var(--corPrim);
+        width: 200px;
+        margin-top: 10px;
+        color: var(--corDest);
+        align-self: center;
+    }
+
+    section a:hover{
+        background-color: var(--corSecu);
+        color: var(--corLink);
+    }
 
 
 footer {
